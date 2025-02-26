@@ -1,4 +1,4 @@
-import { MdEmail, MdLock } from "react-icons/md";
+import { MdEmail, MdLock, MdWrapText } from "react-icons/md";
 import { Button } from "../../components/button";
 import { Header } from "../../components/header";
 import { Input } from "../../components/input";
@@ -16,11 +16,11 @@ import {
 import { Collunm } from "../../components/header/styles";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Cadastro = () => {
   const navigate = useNavigate();
 
   const handleClickSignIn = () => {
-    navigate("/feed");
+    navigate("/cadastrar");
   };
 
   return (
@@ -29,27 +29,34 @@ const Login = () => {
       <Container>
         <Column>
           <Title>
-            A plataforma para você aprender com experts, dominar as principais
+            A plataforma oara você aprender com experts, dominar as principais
             tecnologias e entrar mais rápido nas empresas mais desejadas.
           </Title>
         </Column>
         <Collunm>
           <Wrapper>
-            <TitleLogin>Faça seu cadastro</TitleLogin>
-            <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
+            <TitleLogin>Comece agora grátis</TitleLogin>
+            <SubtitleLogin>Crie sua conta e make the change._</SubtitleLogin>
             <form>
+              <Input placeholder="Nome completo" leftIcon={<MdWrapText />} />
               <Input placeholder="E-mail" leftIcon={<MdEmail />} />
               <Input placeholder="Senha" leftIcon={<MdLock />} />
               <Button
-                title="Entrar"
+                title="Criar minha conta"
                 variant="secondary"
                 onClick={handleClickSignIn}
                 type="buttun"
               />
             </form>
             <Row>
-              <EsqueciText>Esqueci minha senha</EsqueciText>
-              <CriarText>Criar Conta</CriarText>
+              <p>
+                Ao clicar em "cria conta grátis, declaro que aceito as Políticas
+                de Privacidade e os termos de Uso da DIO.
+              </p>
+            </Row>
+            <Row>
+              <EsqueciText>já tenho uma conta.</EsqueciText>
+              <CriarText>Fazer login</CriarText>
             </Row>
           </Wrapper>
         </Collunm>
@@ -58,4 +65,4 @@ const Login = () => {
   );
 };
 
-export { Login };
+export { Cadastro };
