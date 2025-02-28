@@ -38,9 +38,21 @@ const Cadastro = () => {
             <TitleLogin>Comece agora grátis</TitleLogin>
             <SubtitleLogin>Crie sua conta e make the change._</SubtitleLogin>
             <form>
-              <Input placeholder="Nome completo" leftIcon={<MdWrapText />} />
-              <Input placeholder="E-mail" leftIcon={<MdEmail />} />
-              <Input placeholder="Senha" leftIcon={<MdLock />} />
+              <Input 
+                name="name"
+                placeholder="Nome completo" 
+                leftIcon={<MdWrapText />} 
+              />
+              <Input
+                name="email"
+                placeholder="E-mail" 
+                leftIcon={<MdEmail />} 
+              />
+              <Input
+                name="password"
+                placeholder="Senha" 
+                leftIcon={<MdLock />} 
+              />
               <Button
                 title="Criar minha conta"
                 variant="secondary"
